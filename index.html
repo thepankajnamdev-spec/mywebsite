@@ -1,78 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pankaj Portfolio</title>
+
+<title>PMSF WELLNESS INDIA</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body{
-font-family: Arial;
-margin:0;
+margin:0%;
+font-family:Arial;
 }
 
-nav{
-background:#333;
-padding:15px;
-text-align:center;
+/* Header */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0a3d62;
+padding:10px 20px;
 }
 
-nav a{
+.left{
+display:flex;
+align-items:center;
+}
+
+.logo{
+width:60px;
+margin-right:10px;
+}
+
+.title{
+color:white;
+font-size:24px;
+font-weight:bold;
+text-shadow:2px 2px 4px black;
+}
+
+.menu a{
 color:white;
 margin:15px;
 text-decoration:none;
 font-size:18px;
 }
 
-header{
+/* Hero */
+
+.hero{
+background:#f2f2f2;
 text-align:center;
-padding:40px;
-background:#f4f4f4;
+padding:100px 20px;
 }
 
-img{
-width:150px;
+.hero h1{
+font-size:40px;
+}
+
+.hero button{
+background:#0a3d62;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+}
+
+/* Products */
+
+.products{
+padding:60px;
+text-align:center;
+}
+
+.product{
+display:inline-block;
+width:220px;
+margin:20px;
+background:white;
+padding:15px;
+box-shadow:0 0 10px gray;
+}
+
+.product img{
+width:100%;
+}
+
+/* Contact */
+
+.contact{
+background:#0a3d62;
+color:white;
+text-align:left side corners;
+padding:50px;
+}
+
+/* WhatsApp button */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
 border-radius:50%;
-}
-
-section{
-padding:20px;
-text-align:center;
+font-size:20px;
+text-decoration:none;
 }
 
 </style>
 
 </head>
 
+<script>
+
+var images = [
+"slide1.jpg",
+"slide2.jpg",
+"slide3.jpg"
+];
+
+var i = 0;
+
+function changeSlide(){
+
+document.getElementById("slide").src = images[i];
+
+i++;
+
+if(i >= images.length){
+i = 0;
+}
+
+}
+
+setInterval(changeSlide,3000);
+
+</script>
+
 <body>
 
-<nav>
+<!-- Header -->
+
+<div class="header">
+
+<div class="left">
+
+<img src="logo.png" class="logo">
+
+<div class="title">
+SHUBHARAMBH PMSF WELLNESS INDIA
+</div>
+
+</div>
+
+<div class="menu">
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Skills</a>
+<a href="#">About Us</a>
+<a href="#">Our Products</a>
+<a href="#">Our Services</a>
+<a href="#">Career With Us</a>
+<a href="#">Our Events</a>
 <a href="#">Contact</a>
-</nav>
+</div>
 
-<header>
-<img src="myphoto.jpg">
-<h1>Pankaj Namdev</h1>
-<p>Future Web Developer</p>
-</header>
+</div>
 
-<section>
-<h2>About Me</h2>
-<p>I am learning Web Development and Software Designing.</p>
-</section>
+<!-- Hero Section -->
 
-<section>
-<h2>My Skills</h2>
-<p>HTML</p>
-<p>CSS</p>
-<p>JavaScript</p>
-</section>
+<div class="hero">
 
-<section>
-<h2>Contact</h2>
-<p>Email: example@email.com</p>
-</section>
+<h1>Welcome to World Of Reality</h1>
+
+<p>Physically | Mentally | Sprictually | Financially</p>
+
+<button>View Products</button>
+
+</div>
+
+<!-- Products -->
+
+<div class="products">
+
+<h2>Our Products</h2>
+
+<div class="product">
+<img src="product1.jpg">
+<h3> Physical Growth</h3>
+</div>
+
+<div class="product">
+<img src="product2.jpg">
+<h3>Mentally Strong</h3>
+</div>
+
+<div class="product">
+<img src="product3.jpg">
+<h3> Sprictually Balanced</h3>
+</div>
+
+<div class="product">
+<img src="product3.jpg">
+<h3> Financially Stable</h3>
+</div>
+</div>
+
+<!-- Contact -->
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email: info@pmsfwellness.com</p>
+
+<p>Phone: +91 9343433522</p>                                                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d451.75872839493906!2d80.1898276303873!3d25.06562233679275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1773246479948!5m2!1sen!2sin" width="300" height="225" style="border: 1px solid #ccc;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+<p>Registered Address: Ward Number 15, In Front Of Santoshi Mata Temple</p>
+<p>Jagman Talab Road, Chandla, Chhatarpur Madhya Pradesh - 471525</p>
+
+
+</div>
+
+<!-- WhatsApp -->
+
+<a href="https://wa.me/919343433522" class="whatsapp">
+W
+</a>
 
 </body>
 </html>
